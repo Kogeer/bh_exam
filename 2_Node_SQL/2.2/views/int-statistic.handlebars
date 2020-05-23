@@ -1,0 +1,13 @@
+<h3>{{interviewer}}</h3>
+<table class="table">
+        <tr>
+            <th scope="col-3">Name</th>
+            <th scope="col-3">Email</th>
+        </tr>
+    {{#each candidates}}
+    <tr>
+        <th>{{name}}</th>
+        <th>{{email}}</th>
+    </tr>
+    {{/each}}
+</table>

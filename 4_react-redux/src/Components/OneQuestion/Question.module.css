@@ -1,0 +1,13 @@
+.qContainer {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    margin:auto;
+    text-align: center;
+    border: 1px solid;
+}
+
+.qHeader {
+    display: flex;
+    justify-content: space-around;
+}

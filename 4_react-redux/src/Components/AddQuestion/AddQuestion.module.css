@@ -1,0 +1,11 @@
+.addQContainer {
+    display: flex;;
+    justify-items: center;
+    flex-direction: column;
+    width: 400px;
+    margin: auto;
+}
+
+.addQuestionButton {
+    width: 90px;
+}

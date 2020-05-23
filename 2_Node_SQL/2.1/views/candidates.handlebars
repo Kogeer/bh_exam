@@ -1,0 +1,63 @@
+<h3>Regisztrált jelentkező</h3>
+<table class="table">
+        <tr>
+            <th scope="col-3">Name</th>
+            <th scope="col-3">Email</th>
+            <th scope="col-3">Status change</th>
+        </tr>
+    {{#each candidates0}}
+    <tr>
+        <th>{{name}}</th>
+        <th>{{email}}</th>
+        <th><a href="/candidate-status/{{id}}">Status</a></th>
+    </tr>
+    {{/each}}
+</table>
+
+<h3>Első interjúra várnak</h3>
+<table class="table">
+    <tr>
+        <th scope="col-3">Name</th>
+        <th scope="col-3">Email</th>
+        <th scope="col-3">Status change</th>
+    </tr>
+    {{#each candidates1}}
+    <tr>
+        <th>{{name}}</th>
+        <th>{{email}}</th>
+        <th><a href="/candidate-status/{{id}}">Status</a></th>
+    </tr>
+    {{/each}}
+</table>
+
+<h3>Második interjúra várnak</h3>
+<table class="table">
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Status change</th>
+    </tr>
+    {{#each candidates2}}
+    <tr>
+        <th>{{name}}</th>
+        <th>{{email}}</th>
+        <th><a href="/candidate-status/{{id}}">Status</a></th>
+    </tr>
+    {{/each}}
+</table>
+
+<h3>Elutasítottak</h3>
+<table class="table">
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Status change</th>
+    </tr>
+    {{#each candidates3}}
+    <tr>
+        <th>{{name}}</th>
+        <th>{{email}}</th>
+        <th><a href="/candidate-status/{{id}}">Status</a></th>
+    </tr>
+    {{/each}}
+</table>

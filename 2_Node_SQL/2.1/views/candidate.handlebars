@@ -1,0 +1,10 @@
+<form method="POST" action="/change-status/{{candidate.id}}" id="editchange">
+        <label><h4>Name</h4></label><br>
+        <input type="text" name="name" id="name" value="{{candidate.name}}"><br>
+        <label><h4 class="mt-2">Email</h4></label><br>
+        <input type="text" name="email" id="email" value="{{candidate.email}}">
+        <div class="mt-4 mb-0"><label><h4>Status</h4></label></div>
+        <div>0=regisztrált,1=első körös,2=2.körös,3=elutasított</div>
+        <input type="text" name="status" id="status" value="{{candidate.status}}"><br>
+        <input type="submit" value="Publish" id="publishbutton">
+</form>

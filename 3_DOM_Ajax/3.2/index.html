@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.2</title>
+</head>
+<body>
+
+    <div id="root">
+        <select id="selectorResource"></select>
+        <select id="selectorTask"></select>
+    </div>
+
+
+
+    <script type="text/javascript">
+
+    (async function loadResources() {
+        const url = 'http://localhost:8080/resources'
+        const res = await fetch(url);
+        const resJson = await res.json();
+
+        const selectorResource = document.getElementById('selectorResource')
+        
+        for(let i = 0; i < resJson.length; i++) {
+            const option = document.createElement("option");
+            option.value = resJson[i].resource;
+            option.text = resJson[i].resource;
+            selectorResource.appendChild(option);
+        }
+
+    })();
+
+    const selectedResource = document.getElementById('selectorResource');
+    console.log(selectedResource);
+    const selectorTask = document.getElementById('selectorTask')
+
+    selectedResource.addEventListener('change', async event => {
+        const checkedOption = [...event.target.children].find(c => c.selected);
+        const url = 'http://localhost:8080/resources'
+        const res = await fetch(url);
+        const resJson = await res.json();
+        console.log(checkedOption.value)
+
+        
+        
+        for(let i = 0; i < resJson.length; i++) {
+            for(let j = 0; j < resJson[i].task.length; j++) {
+                if(resJson[i].resource == checkedOption.value) {
+                    const option = document.createElement("option");
+                    option.value = resJson[i].task[j];
+                    option.text = resJson[i].task[j];
+                    selectorTask.appendChild(option);
+                }
+            }
+        }
+    })
+    </script>
+</body>
+</html>

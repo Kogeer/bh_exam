@@ -1,0 +1,7 @@
+.aContainer {
+    width: 300px;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
